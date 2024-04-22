@@ -1,0 +1,15 @@
+export { default as Footer } from "./footer/Footer.jsx";
+export { default as Header } from "./header/Header.jsx";
+export { default as AboutSection } from "./aboutSection/AboutSection.jsx";
+export { default as BannerSection } from "./bannerSection/BannerSection.jsx";
+export { default as ContactSection } from "./contactSection/ContactSection.jsx";
+export { default as DiscountSection } from "./discountSection/DiscountSection.jsx";
+export { default as HomeSection } from "./homeSection/HomeSection.jsx";
+export { default as NewsletterSection } from "./newsletterSection/NewsletterSection.jsx";
+export { default as PageHeading } from "./pageHeading/PageHeading.jsx";
+export { default as SectionHeading } from "./sectionHeading/SectionHeading.jsx";
+export { default as ServiceSection } from "./serviceSection/ServiceSection.jsx";
+export { default as ServiceCard } from "./serviceSection/ServiceCard.jsx";
+export { default as ServicePriceSection } from "./serviceSection/ServicePriceSection.jsx";
+export { default as ServicePriceCard } from "./serviceSection/ServicePriceCard.jsx";
+export { default as WhyChooseSection } from "./whyChooseSection/WhyChooseSection.jsx";

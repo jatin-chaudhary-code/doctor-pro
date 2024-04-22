@@ -1,0 +1,923 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ============================== css reset ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --clr-primary: #57ccc3;
+  --clr-secondary: #fd556d;
+  --clr-dark-gray: #404040;
+  --clr-light-gray: #828282;
+  --clr-bg-light-gray: #eff3f7;
+  --clr-white: #fff;
+  --clr-black: #000;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* ============================== header styling ============================== */
+.header {
+  padding: 3rem 10rem;
+  width: 100%;
+  background-color: var(--clr-white);
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-items ul li a {
+  color: var(--clr-dark-gray);
+  font-weight: 600;
+  margin: 0 1rem;
+  transition: 0.2s all ease;
+}
+
+.nav-items ul li a:hover,
+.nav-items ul li.active a {
+  color: var(--clr-primary);
+}
+
+.navbar .nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-buttons .social-handle {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons .social-handle span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6ebf1;
+  color: var(--clr-dark-gray);
+  font-size: 1.7rem;
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.social-handle span:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+header.header.sticky-header {
+  position: fixed;
+  width: 100%;
+  padding: 1rem 10rem;
+  z-index: 999;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .hamburger-menu {
+  display: none;
+}
+
+.navbar .nav-close-btn {
+  display: none;
+}
+
+/* ============================== home section start ============================== */
+.home-section {
+  min-height: 100vh;
+  background: url("../images/home_slider.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.home-section .home-content {
+  width: 50%;
+}
+
+.home-content h2 {
+  color: var(--clr-primary);
+  font-weight: 600;
+}
+
+.home-content h1 {
+  color: var(--clr-dark-gray);
+  font-size: 6.4rem;
+  font-weight: 500;
+}
+
+.home-content .home-buttons {
+  margin-top: 3rem;
+}
+
+/*============================== about section styling ============================== */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about-content .stat-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.stat-container .stat h3 {
+  color: var(--clr-primary);
+}
+
+.stat-container .stat p {
+  margin: 0;
+  color: var(--clr-dark-gray);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.about-form {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-container .form-heading {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  display: inline-block;
+  padding: 2rem;
+}
+
+.form-container .input-field-container {
+  margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.form-container .input-field-container > * {
+  width: 45%;
+  margin: 1rem;
+  padding: 2rem;
+  border: 2px solid #dbd9d9;
+  transition: 0.2s all ease;
+}
+
+.input-field-container > *:hover {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+.input-field-container input[type="submit"] {
+  padding: 1.2rem;
+  display: block;
+  width: 100%;
+  border: 2px solid var(--clr-secondary);
+}
+
+/* ======================================= why choose section styling ======================================= */
+.why-choose-section {
+  background-color: #f1f2f6;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.why-choose-section::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: url("../images/why_1.jpg") center no-repeat;
+  bottom: 0;
+  left: 0;
+}
+
+.why-choose-section .container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.why-choose-content {
+  width: 50%;
+}
+
+.why-choose-content .choose-container {
+  margin-top: 4rem;
+}
+
+.choose-container .choose-item {
+  display: flex;
+  align-items: center;
+  gap: 0 3rem;
+  margin: 2rem 0;
+}
+
+.choose-item h4 {
+  font-weight: 600;
+  color: var(--clr-dark-gray);
+}
+
+.choose-item p {
+  margin-top: 0;
+}
+
+/* ======================================= banner section styling ======================================= */
+.banner-section {
+  background-color: var(--clr-secondary);
+  padding: 5rem 0;
+}
+
+.banner-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-section .left-side h2 {
+  font-weight: 600;
+  color: var(--clr-white);
+}
+
+.banner-section .left-side p {
+  margin-top: 0;
+  color: var(--clr-white);
+}
+
+.banner-section .right-side {
+  display: inline-block;
+  font-size: 3rem;
+  color: var(--clr-white);
+  font-weight: 600;
+  background-color: #ee4860;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+/* ======================================= service section styling ======================================= */
+.service-section .service-item-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+}
+
+.service-item-container .service-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.service-item h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.service-item p {
+  margin-top: 1rem;
+}
+
+/* ======================================= discount section styling ======================================= */
+.discount-section {
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.discount-section .bg-img {
+  height: 100%;
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: -20rem;
+  z-index: -1;
+}
+
+.discount-section .container {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.discount-section .discount-content {
+  width: 35%;
+  background-color: var(--clr-white);
+  padding: 8rem 4rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.discount-content h3 {
+  color: var(--clr-primary);
+  font-size: 6rem;
+}
+
+.discount-content h3 sup {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.discount-content h1 {
+  font-size: 7.2rem;
+  font-weight: 600;
+}
+
+.discount-content h3 span {
+  font-size: 2.5rem;
+  color: var(--clr-light-gray);
+  font-weight: 600;
+}
+
+.discount-content p {
+  margin: 2rem 0;
+}
+
+/* ======================================= newsletter section stylig ======================================= */
+.newsletter-section {
+  background: linear-gradient(
+      90deg,
+      rgba(43, 102, 130, 0.7114495456385679) 0%,
+      rgba(43, 102, 130, 0.6694327389158788) 35%,
+      rgba(43, 102, 130, 0.74226187056854) 100%
+    ),
+    url("../images/blog_2.jpg") center no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+.newsletter-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newsletter-section .container h1 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: var(--clr-white);
+  font-weight: 500;
+}
+
+.newsletter-section .input-field {
+  margin: 3rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.newsletter-section .input-field input[type="email"] {
+  padding: 1rem 1rem 1rem 2rem;
+  background-color: transparent;
+  border: 2px solid #dbd9d9;
+  width: 40%;
+}
+
+.newsletter-section .input-field a {
+  border-radius: 0;
+  padding: 1rem 3rem;
+  border: none;
+}
+
+/* ======================================= footer section styling  ======================================= */
+.footer {
+  background: #26292d;
+  padding: 10rem 0;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 4rem;
+}
+
+.footer .container p {
+  font-size: 1.6rem;
+}
+
+.footer-item h4 {
+  padding-top: 2.5rem;
+  font-weight: 600;
+  color: var(--clr-white);
+}
+
+.footer-item .clr-primary {
+  color: var(--clr-primary);
+}
+
+.footer-item .margin {
+  margin: 0;
+}
+
+.footer-timing {
+  border: 2px solid var(--clr-light-gray);
+  padding: 0 2rem;
+}
+
+.footer-timing table {
+  margin-top: 4rem;
+  font-size: 1.4rem;
+  color: var(--clr-light-gray);
+}
+
+.footer-timing table td:last-child {
+  padding: 1rem 1rem;
+}
+
+/* ======================================= testimonials section styling =======================================  */
+.testimonial-section {
+  background-color: var(--clr-bg-light-gray);
+}
+
+.testimonial-section .testimonial-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  font-size: 2.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin: 30px auto 20px auto;
+}
+
+.testimonial-slide {
+  padding: 0 4rem;
+}
+
+.testimonial-content {
+  text-align: center;
+  padding: 10px 4rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.testimonial-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.testimonial-detail .testi-img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.testimonial-detail .testimonial-name {
+  margin-top: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--clr-black);
+}
+
+.testimonial-name span {
+  color: var(--clr-primary);
+}
+
+/* ======================================= surgeon section styling =======================================  */
+.surgeon-section .surgeon-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.surgeon-container .surgeon-card {
+  padding: 1rem;
+  text-align: center;
+}
+
+.surgeon-card .surgeon-img {
+  height: 60%;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.surgeon-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.surgeon-card .surgeon-name {
+  font-weight: 600;
+  font-size: 2.6rem;
+  margin-top: 3rem;
+}
+
+.surgeon-card .surgeon-post {
+  color: var(--clr-primary);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.surgeon-card .content {
+  margin-top: 3rem;
+}
+
+/* ======================================= about page styling =======================================  */
+.about-section .about-img {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.about-section .about-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====================================== contact page styling ==========================================  */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-container .about-form {
+  /* width: 50%; */
+}
+
+.contact-container .contact-information {
+  /* width: 40%; */
+  padding-left: 5rem;
+}
+
+.contact-heading {
+  font-weight: 600;
+}
+
+.contact-information p:first-of-type {
+  margin-top: 2rem;
+}
+
+.contact-information .contact-no {
+  background-color: var(--clr-primary);
+  padding: 1rem 2rem 1rem 18rem;
+  font-size: 2.3rem;
+  color: var(--clr-white);
+  border-radius: 3rem;
+  position: relative;
+  margin: 2rem 0;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.contact-no span {
+  position: absolute;
+  background-color: var(--clr-secondary);
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1.2rem 2rem;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  font-size: 2rem;
+}
+
+.contact-table {
+  font-size: 1.6rem;
+  margin: 3rem 0;
+}
+
+.contact-table tr th,
+.contact-table tr td {
+  text-align: left;
+}
+
+.contact-table th {
+  color: var(--clr-primary);
+  padding: 10px;
+}
+
+.contact-table td {
+  color: var(--clr-dark-gray);
+  font-weight: 600;
+}
+
+/* ====================================== service page styling ==========================================  */
+.service-price-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.service-price-card {
+  background-color: #eaf2f5;
+  border-left: 3px solid var(--clr-primary);
+  padding: 2rem 3rem;
+  position: relative;
+}
+
+.service-price-card .service-name {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.service-price-card .service-content {
+  margin-top: 1.5rem;
+}
+
+.service-price-card .service-price {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--clr-white);
+  background-color: var(--clr-secondary);
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  top: -2rem;
+  right: 1rem;
+}
+
+/* ======================================= media queries =======================================  */
+@media screen and (max-width: 1440px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  /* header styling  */
+  .navbar .nav-buttons .btn:first-child {
+    display: none;
+  }
+
+  header.header {
+    padding: 3rem 2rem;
+  }
+
+  header.header.sticky-header {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  /* header styling  */
+  .navbar .nav-buttons .btn {
+    display: none;
+  }
+
+  /* footer styling  */
+  .footer .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 8.5px;
+  }
+
+  /* about section  */
+  .about-section .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 10rem;
+  }
+
+  /* why choose section  */
+  .why-choose-section .container {
+    display: block;
+  }
+
+  .why-choose-section::before {
+    display: none;
+  }
+
+  .why-choose-section .why-choose-content {
+    width: 100%;
+  }
+
+  /* service section styling  */
+  .service-section .service-item-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* discount section  */
+  .discount-section .container {
+    justify-content: center;
+  }
+
+  .discount-section .discount-content {
+    width: 40%;
+  }
+
+  /* footer styling  */
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+
+  /* home section  */
+  .home-section .home-content {
+    width: 75%;
+  }
+
+  /* about section  */
+  .about-section .about-container {
+    padding: 0 2rem;
+  }
+
+  /* banner section  */
+  .banner-section .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem 0;
+  }
+
+  /* service section  */
+  .service-section .service-item-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* discount section  */
+  .discount-section .discount-content {
+    width: 80%;
+  }
+
+  /* footer section  */
+  .footer .container {
+    grid-template-columns: 1fr;
+  }
+
+  /* page heading section  */
+
+  .page-heading-section {
+    background-position: left;
+  }
+
+  .page-heading-section .sub-heading {
+    font-size: 2rem !important;
+  }
+
+  /* contact section  */
+  .contact-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem 0;
+  }
+
+  .contact-container .contact-information {
+    padding-left: 0;
+  }
+
+  /* service price section  */
+  .service-price-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 7px;
+  }
+
+  section {
+    padding: 5rem 0 !important;
+  }
+
+  /* home section  */
+  .home-section {
+    min-height: auto;
+  }
+  .home-section .home-content {
+    width: 100%;
+  }
+
+  /* about section  */
+  .about-section .stat-container {
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem 0;
+  }
+
+  .about-container .input-field-container > * {
+    width: 100%;
+  }
+
+  .about-container .input-field-container .btn {
+    font-size: 2.4rem;
+  }
+
+  /* surgeon section  */
+  .surgeon-section .surgeon-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* surgeon section  */
+  .surgeon-section .surgeon-container {
+    grid-template-columns: 1fr;
+  }
+
+  .surgeon-container .surgeon-card {
+    height: fit-content;
+  }
+
+  .surgeon-card .surgeon-img {
+    height: auto;
+    width: 70%;
+    margin: auto;
+  }
+
+  /* .testimonial-section  */
+
+  .testimonial-content,
+  .testimonial-slide {
+    padding: 1rem;
+  }
+}
+/* ================================ hamburger menu styling ======================================== */
+@media screen and (max-width: 768px) {
+  header .navbar .nav-items {
+    position: fixed;
+    background-color: var(--clr-primary);
+    width: 300px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 2rem 3rem;
+    transition: 0.3s all ease;
+    transform: translateX(300px);
+  }
+
+  .navbar .nav-items ul {
+    flex-direction: column;
+    align-items: start;
+    margin-top: 15rem;
+  }
+
+  .navbar .nav-items ul li a {
+    font-size: 3rem;
+    color: var(--clr-white);
+    font-weight: 400;
+    margin: auto 0;
+  }
+
+  .navbar .nav-close-btn {
+    display: inline-block;
+    font-size: 4rem;
+    color: var(--clr-white);
+  }
+
+  .navbar .nav-buttons {
+    display: none;
+  }
+
+  .navbar .hamburger-menu {
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--clr-dark-gray);
+    cursor: pointer;
+    transition: 0.3s all ease;
+  }
+
+  .hamburger-menu:hover {
+    color: var(--clr-primary);
+  }
+
+  .header .navbar .nav-items.show-nav {
+    transform: translateX(0);
+  }
+}
