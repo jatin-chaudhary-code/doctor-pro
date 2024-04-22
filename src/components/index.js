@@ -13,3 +13,5 @@ export { default as ServiceCard } from "./serviceSection/ServiceCard.jsx";
 export { default as ServicePriceSection } from "./serviceSection/ServicePriceSection.jsx";
 export { default as ServicePriceCard } from "./serviceSection/ServicePriceCard.jsx";
 export { default as WhyChooseSection } from "./whyChooseSection/WhyChooseSection.jsx";
+export { default as SurgeonSection } from "./surgeonSection/SurgeonSection.jsx";
+export { default as TestimonialSection } from "./testimonialSection/TestimonialSection.jsx";
